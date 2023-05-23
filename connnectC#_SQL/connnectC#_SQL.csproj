@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{417E503B-518F-4810-974A-DF38B2C26AE2}</ProjectGuid>
+    <ProjectGuid>{C23FA47C-B7F8-4792-B0F8-AF29B616201C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ConnectC__SQl</RootNamespace>
-    <AssemblyName>ConnectC#_SQl</AssemblyName>
+    <RootNamespace>connnectC__SQL</RootNamespace>
+    <AssemblyName>connnectC#_SQL</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
