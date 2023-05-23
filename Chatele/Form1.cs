@@ -41,7 +41,7 @@ namespace Chatele
         {
             if (update.Message is Message message)
             {
-                await botClient.SendTextMessageAsync(message.Chat.Id, " helobro ");
+                await botClient.SendTextMessageAsync(message.Chat.Id, " helo bro ");
             } 
         }
 
