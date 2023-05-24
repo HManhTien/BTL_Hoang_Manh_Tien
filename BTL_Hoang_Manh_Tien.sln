@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "connnectC#_SQL", "connnectC
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bot", "Bot", "{0AFFDD9A-0D7A-4FF7-AF54-576F8E145215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chatele", "Chatele\Chatele.csproj", "{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chatele", "Chatele\Chatele.csproj", "{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQl", "SQl", "{8CA35D2C-1006-45A3-9AF9-DA22952A7D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Dangnhap", "SQL_Dangnhap\SQL_Dangnhap.csproj", "{0976AADF-0712-411D-AE91-AFB0ECE987A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0976AADF-0712-411D-AE91-AFB0ECE987A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0976AADF-0712-411D-AE91-AFB0ECE987A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0976AADF-0712-411D-AE91-AFB0ECE987A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0976AADF-0712-411D-AE91-AFB0ECE987A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C23FA47C-B7F8-4792-B0F8-AF29B616201C} = {D69BE784-0EC6-4085-9DEF-2D96FC926979}
 		{68ABD0E8-1687-4FD7-8BDD-929A8EBB22CF} = {0AFFDD9A-0D7A-4FF7-AF54-576F8E145215}
+		{0976AADF-0712-411D-AE91-AFB0ECE987A1} = {8CA35D2C-1006-45A3-9AF9-DA22952A7D0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {60F7100A-EE29-42FE-B9AA-E4F6C55F52C9}
