@@ -26,7 +26,7 @@ namespace themsv
 
         public void themsinhvien()
         {
-
+            ketnoi.Open();
             string mssv = txt_mssv.Text;
             string hoten = txt_hoten.Text;
             string lop = txt_lop.Text;
@@ -42,18 +42,23 @@ namespace themsv
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
 
+            txt_mssv.Clear();
+            txt_hoten.Clear();
+            txt_diachi.Clear();
+            txt_dt.Clear();
             ketnoi.Close();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             themsinhvien();
+            
         }
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
             ketnoi = new SqlConnection(ChuoiKetNoi);
-            ketnoi.Open();
+          
         }
 
   

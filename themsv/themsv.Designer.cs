@@ -146,8 +146,9 @@
             this.txt_lop.Size = new System.Drawing.Size(189, 24);
             this.txt_lop.TabIndex = 12;
             this.txt_lop.Text = "56KMT.01";
+          //  this.txt_lop.SelectedIndexChanged += new System.EventHandler(this.txt_lop_SelectedIndexChanged);
             // 
-            // Form1
+            // themsv
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "themsv";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

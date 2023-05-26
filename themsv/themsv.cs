@@ -24,8 +24,10 @@ namespace themsv
         SqlCommand thuchien;
         SqlDataReader docdulieu;
 
+
         public void themsinhvien()
         {
+            ketnoi.Open();
 
             string mssv = txt_mssv.Text;
             string hoten = txt_hoten.Text;
@@ -42,6 +44,14 @@ namespace themsv
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
 
+
+            txt_mssv.Clear();
+            txt_hoten.Clear();
+         
+            txt_diachi.Clear();
+            txt_dt.Clear();
+
+          
             ketnoi.Close();
         }
         private void button1_Click(object sender, EventArgs e)
@@ -53,9 +63,9 @@ namespace themsv
         private void Form1_Load(object sender, EventArgs e)
         {
             ketnoi = new SqlConnection(ChuoiKetNoi);
-            ketnoi.Open();
+           
         }
 
-  
+
     }
 }

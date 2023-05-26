@@ -44,12 +44,13 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.Location = new System.Drawing.Point(145, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 53);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -107,7 +108,7 @@
             this.txt_mssv.Location = new System.Drawing.Point(129, 61);
             this.txt_mssv.Multiline = true;
             this.txt_mssv.Name = "txt_mssv";
-            this.txt_mssv.Size = new System.Drawing.Size(189, 30);
+            this.txt_mssv.Size = new System.Drawing.Size(216, 30);
             this.txt_mssv.TabIndex = 7;
             // 
             // txt_hoten
@@ -115,7 +116,7 @@
             this.txt_hoten.Location = new System.Drawing.Point(129, 107);
             this.txt_hoten.Multiline = true;
             this.txt_hoten.Name = "txt_hoten";
-            this.txt_hoten.Size = new System.Drawing.Size(189, 30);
+            this.txt_hoten.Size = new System.Drawing.Size(216, 30);
             this.txt_hoten.TabIndex = 8;
             // 
             // txt_diachi
@@ -123,7 +124,7 @@
             this.txt_diachi.Location = new System.Drawing.Point(129, 200);
             this.txt_diachi.Multiline = true;
             this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(189, 30);
+            this.txt_diachi.Size = new System.Drawing.Size(216, 30);
             this.txt_diachi.TabIndex = 10;
             // 
             // txt_dt
@@ -131,7 +132,7 @@
             this.txt_dt.Location = new System.Drawing.Point(129, 249);
             this.txt_dt.Multiline = true;
             this.txt_dt.Name = "txt_dt";
-            this.txt_dt.Size = new System.Drawing.Size(189, 30);
+            this.txt_dt.Size = new System.Drawing.Size(216, 30);
             this.txt_dt.TabIndex = 11;
             // 
             // txt_lop
@@ -143,14 +144,15 @@
             "58KMT.01"});
             this.txt_lop.Location = new System.Drawing.Point(129, 158);
             this.txt_lop.Name = "txt_lop";
-            this.txt_lop.Size = new System.Drawing.Size(189, 24);
+            this.txt_lop.Size = new System.Drawing.Size(216, 24);
             this.txt_lop.TabIndex = 12;
             this.txt_lop.Text = "56KMT.01";
             // 
-            // Form1
+            // themsv1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(482, 450);
             this.Controls.Add(this.txt_lop);
             this.Controls.Add(this.txt_dt);
@@ -164,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "themsv1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
