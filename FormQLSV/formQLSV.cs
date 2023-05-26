@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 
+
 namespace FormQLSV
 {
     public partial class FormQLSV : Form
@@ -50,6 +51,9 @@ namespace FormQLSV
         {
             hienthi();
         }
-    
+
+        
+
+        
     }
 }

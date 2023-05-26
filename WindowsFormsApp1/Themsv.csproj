@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A078FD1-E521-4666-BBED-AB9109CAAD42}</ProjectGuid>
+    <ProjectGuid>{6D9C340A-013D-452B-A3B9-17FB719A52C8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FormQLSV</RootNamespace>
-    <AssemblyName>FormQLSV</AssemblyName>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formQLSV.cs">
+    <Compile Include="Themsv.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formQLSV.Designer.cs">
-      <DependentUpon>formQLSV.cs</DependentUpon>
+    <Compile Include="Themsv.Designer.cs">
+      <DependentUpon>Themsv.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formQLSV.resx">
-      <DependentUpon>formQLSV.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +63,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Themsv.resx">
+      <DependentUpon>Themsv.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

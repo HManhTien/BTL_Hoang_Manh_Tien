@@ -50,6 +50,10 @@ namespace FormQLSV
         {
             hienthi();
         }
-    
+
+        private void cmd_themsv_Click(object sender, EventArgs e)
+        {
+            themsv.themsinhvien();
+        }
     }
 }
