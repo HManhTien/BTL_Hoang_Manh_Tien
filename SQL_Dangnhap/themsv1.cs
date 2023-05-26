@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-
-namespace WindowsFormsApp1
+namespace themsv
 {
-    public partial class Themsv : Form
+    public partial class themsv1 : Form
     {
-        public Themsv()
+        public themsv1()
         {
             InitializeComponent();
         }
@@ -24,32 +23,20 @@ namespace WindowsFormsApp1
         SqlConnection ketnoi;
         SqlCommand thuchien;
         SqlDataReader docdulieu;
-       
 
-
-        public void Themsv_Load(object sender, EventArgs e)
+        public void themsinhvien()
         {
-            ketnoi = new SqlConnection(ChuoiKetNoi);
-            ketnoi.Open();
- 
 
-
-
-        }
-
-        public void themsinhvien()      
-        {
-          
-            string mssv = textmssv.Text;
-            string hoten = texthoten.Text;
-            string lop = txtlop.Text;
-            string diachi = textdiachi.Text;
-            string dt = textdt.Text;
+            string mssv = txt_mssv.Text;
+            string hoten = txt_hoten.Text;
+            string lop = txt_lop.Text;
+            string diachi = txt_diachi.Text;
+            string dt = txt_dt.Text;
             //int dtdd = int.Parse(dt);
 
             sql = @"insert into lop56KMT
 	        values 
-            ('1' , '"+mssv+ "' , '"+ hoten + "' , '"+ lop + "'  , '"+ diachi + "'  ,  "+ dt + ")";
+            ('1' , '" + mssv + "' , '" + hoten + "' , '" + lop + "'  , '" + diachi + "'  ,  " + dt + ")";
             MessageBox.Show(sql);
 
             thuchien = new SqlCommand(sql, ketnoi);
@@ -57,10 +44,18 @@ namespace WindowsFormsApp1
 
             ketnoi.Close();
         }
-        private void cmd_Themsv_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             themsinhvien();
-            
         }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ketnoi = new SqlConnection(ChuoiKetNoi);
+            ketnoi.Open();
+        }
+
+  
     }
 }

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using themsv;
+
+
 
 
 
@@ -25,6 +28,8 @@ namespace FormQLSV
         SqlConnection ketnoi;
         SqlCommand thuchien;
         SqlDataReader docdulieu;
+
+        themsv.themsv tsv = new themsv.themsv();
 
         private void FormQLSV_Load(object sender, EventArgs e)
         {
@@ -52,8 +57,9 @@ namespace FormQLSV
             hienthi();
         }
 
-        
-
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tsv.ShowDialog();
+        }
     }
 }

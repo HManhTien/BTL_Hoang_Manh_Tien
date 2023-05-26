@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="formlogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="formlogin.Designer.cs">
+      <DependentUpon>formlogin.cs</DependentUpon>
     </Compile>
     <Compile Include="formQLSV.cs">
       <SubType>Form</SubType>
@@ -60,14 +60,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Themsv.cs">
+    <Compile Include="themsv1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Themsv.Designer.cs">
-      <DependentUpon>Themsv.cs</DependentUpon>
+    <Compile Include="themsv1.Designer.cs">
+      <DependentUpon>themsv1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="formlogin.resx">
+      <DependentUpon>formlogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formQLSV.resx">
       <DependentUpon>formQLSV.cs</DependentUpon>
@@ -81,8 +81,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Themsv.resx">
-      <DependentUpon>Themsv.cs</DependentUpon>
+    <EmbeddedResource Include="themsv1.resx">
+      <DependentUpon>themsv1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

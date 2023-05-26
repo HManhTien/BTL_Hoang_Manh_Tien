@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Themsv
+    partial class Themsv1
     {
         /// <summary>
         /// Required designer variable.
