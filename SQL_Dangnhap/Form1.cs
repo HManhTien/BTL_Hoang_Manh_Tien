@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using System.Xml;
+using FormQLSV;
 
 namespace SQL_Dangnhap
 {
@@ -19,28 +21,41 @@ namespace SQL_Dangnhap
             InitializeComponent();
         }
 
+        FormQLSV.FormQLSV fr2 = new FormQLSV.FormQLSV();
+
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection sql = new SqlConnection(@"Data Source=HOANGTIEN\SEVERTEN;Initial Catalog=Cuoi;Integrated Security=True");
+
+            string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=Quanly;Integrated Security=True";
+            SqlConnection sql = new SqlConnection();
+            sql.ConnectionString = connStr;
+            
             try
             {
                 sql.Open();
                 string tk = textbox_tk.Text;
                 string mk = textbox_mk.Text;
-                string str = "select* form NguoiDung where TaiKhoan = "+tk+"  and MatKhau = "+mk+"  ";
-                SqlCommand cmd = new SqlCommand(str, sql);
-                SqlDataReader   sdr = cmd.ExecuteReader();
-                if (sdr.Read() == true )
+                string str = $"select * from NguoiDung where TaiKhoan = \'{tk}\'  and MatKhau = \'{mk}\'  ";
+                SqlCommand cmd = sql.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = str;
+                SqlDataReader sdr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(sdr);
+                if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("Đăng Nhập thành công ");
-                }else
+                    fr2.Show();
+                }
+                else
                 {
                     MessageBox.Show("Đăng NhậpThất Bại ");
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+
             }
         }
     }
