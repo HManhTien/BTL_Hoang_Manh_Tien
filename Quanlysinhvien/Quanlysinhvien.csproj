@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0976AADF-0712-411D-AE91-AFB0ECE987A1}</ProjectGuid>
+    <ProjectGuid>{ACE52CD6-4D73-431F-8160-28E7923D8741}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SQL_Dangnhap</RootNamespace>
-    <AssemblyName>SQL_Dangnhap</AssemblyName>
+    <RootNamespace>Quanlysinhvien</RootNamespace>
+    <AssemblyName>Quanlysinhvien</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -66,12 +66,6 @@
     <Compile Include="themsv1.Designer.cs">
       <DependentUpon>themsv1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewOFSV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewOFSV.Designer.cs">
-      <DependentUpon>ViewOFSV.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="formlogin.resx">
       <DependentUpon>formlogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,9 +83,6 @@
     </Compile>
     <EmbeddedResource Include="themsv1.resx">
       <DependentUpon>themsv1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewOFSV.resx">
-      <DependentUpon>ViewOFSV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

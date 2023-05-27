@@ -28,7 +28,7 @@ namespace SQL_Dangnhap
         string tk, mk;
         FormQLSV.FormQLSV fr2 = new FormQLSV.FormQLSV();
 
-        string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=SV56KMT;Integrated Security=True";
+        string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=QL_BHST_GO;Integrated Security=True";
 
        
 
@@ -36,8 +36,8 @@ namespace SQL_Dangnhap
         {
 
              ketnoi.Open();
-            string sql1 = $"select * from QL_TaiKhoan Where TaiKhoan = '" + tk + "' and MatKhau ='" + mk + "' AND Chucvu = N'Giáo Viên' ";
-            MessageBox.Show(sql1);
+            string sql1 = $"select * from TK_MK Where TaiKhoan = '" + tk + "' and MaKhau ='" + mk + "' AND Chucvu = N'Quản Trị Viên' ";
+           
 
 
 
@@ -50,14 +50,16 @@ namespace SQL_Dangnhap
 
             if(dt1.Rows.Count > 0)
             {
-                MessageBox.Show("GIÁO VIÊN ĐĂNG NHẬP THÀNH CÔNG !!");
+                MessageBox.Show("ADMIN ĐĂNG NHẬP THÀNH CÔNG !!");
+                this.Hide();
                 fr2.ShowDialog();
-                
+                fr2.Show();
+
 
             }
             else
             {
-                MessageBox.Show("SINH VIÊN ĐĂNG NHẬP THÀNH CÔNG !!");
+                MessageBox.Show("NHÂN VIÊN  ĐĂNG NHẬP THÀNH CÔNG !!");
             }
 
             
@@ -72,7 +74,7 @@ namespace SQL_Dangnhap
             ketnoi.Open();
             tk = textbox_tk.Text;
             mk = textbox_mk.Text;
-            string str = $"select * from QL_TaiKhoan Where TaiKhoan = '" + tk + "' and MatKhau ='" + mk + "'";
+            string str = $"select * from TK_MK  Where TaiKhoan = '" + tk + "' and MaKhau ='" + mk + "'";
 
             
             thuchien = new SqlCommand(str, ketnoi);

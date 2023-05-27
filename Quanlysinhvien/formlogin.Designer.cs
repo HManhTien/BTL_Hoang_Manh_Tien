@@ -91,7 +91,7 @@
             this.textbox_tk.Name = "textbox_tk";
             this.textbox_tk.Size = new System.Drawing.Size(203, 42);
             this.textbox_tk.TabIndex = 4;
-            this.textbox_tk.Text = "GV01";
+            this.textbox_tk.Text = "hoangtien";
             // 
             // textbox_mk
             // 
