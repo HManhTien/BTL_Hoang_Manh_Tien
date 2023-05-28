@@ -8,61 +8,62 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace themsv
 {
-    public partial class Themuser : Form
+    public partial class ADDuser : Form
     {
-        public Themuser()
+        public ADDuser()
         {
             InitializeComponent();
         }
 
-        string ChuoiKetNoi = @"Data Source=HOANGTIEN\SQL;Initial Catalog=QL_BHST_GO;Integrated Security=True";
-        string sql;
         SqlConnection ketnoi;
         SqlCommand thuchien;
         SqlDataReader docdulieu;
+        string sql;
+        string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=QL_BHST_GO;Integrated Security=True";
 
-        public void themnguoidung()
+        public void  themnguoidung()
         {
             ketnoi.Open();
-            string id = textbox1.Text;
-            string tk = textbox2.Text;
-            string mk = textbox3.Text;
-            string hoten = textbox4.Text;
-            string chucvu = combobox1.Text;
+            string id = textBox1.Text;
+            string tk = textBox2.Text;
+            string mk = textBox3.Text;
+            string hoten = textBox4.Text;
+            string chucvu = comboBox1.Text;
 
 
 
             sql = @"insert into Yeu_cau
 	        values 
-            ('" + id + "' , '" + tk + "' , '" + mk + "'  , N'" + hoten + "' , N'" + chucvu + "' )";
+            ('" + id + "' , '" + tk + "' , '" + mk + "'  , N'"+ hoten + "' , N'"+ chucvu + "' )";
+            
 
-
+            MessageBox.Show(sql) ;
             thuchien = new SqlCommand(sql, ketnoi);
             thuchien.ExecuteNonQuery();
             MessageBox.Show("THÊM THÀNH CÔNG!!");
 
-            textbox1.Clear();
-            textbox2.Clear();
-            textbox3.Clear();
-            textbox4.Clear();
-            combobox1.Items.Clear();
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            comboBox1.Items.Clear();
             ketnoi.Close();
 
         }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
 
+
+
             ketnoi.Open();
-            string tk = textbox2.Text;
-            string id = textbox1.Text;
+            string tk = textBox2.Text;
+            string id = textBox1.Text;
             string str = $"select * from TK_MK  Where ID = '" + id + "' or TaiKhoan ='" + tk + "'";
-          
+
 
             thuchien = new SqlCommand(str, ketnoi);
             docdulieu = thuchien.ExecuteReader();
@@ -72,12 +73,12 @@ namespace themsv
             docdulieu.Close();
             if (dt.Rows.Count > 0)
             {
-                textbox1.Clear();
-                textbox2.Clear();
-                textbox3.Clear();
-                textbox4.Clear();
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+                textBox4.Clear();
                 MessageBox.Show("Đã Tồn Tại Tài khoản ");
-
+                
             }
             else
             {
@@ -85,18 +86,11 @@ namespace themsv
                 themnguoidung();
             }
             ketnoi.Close();
-
-
-
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void ADDuser_Load(object sender, EventArgs e)
         {
-            ketnoi = new SqlConnection(ChuoiKetNoi);
-          
+            ketnoi = new SqlConnection(connStr);
         }
-
- 
     }
 }

@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Xml;
 using FormQLSV;
+using themsv;
+
 
 
 namespace SQL_Dangnhap
@@ -27,7 +29,7 @@ namespace SQL_Dangnhap
         // SqlCommand thuchien;
         string tk, mk;
         FormQLSV.FormQLSV fr2 = new FormQLSV.FormQLSV();
-
+        themsv.Themuser themuser = new themsv.Themuser();
         string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=QL_BHST_GO;Integrated Security=True";
 
        
@@ -94,10 +96,12 @@ namespace SQL_Dangnhap
             }
             ketnoi.Close();
         }
-  
 
+        private void button2_Click(object sender, EventArgs e)
+        {
             
-        
+            themuser.ShowDialog();
+        }
 
         private void formlogin_Load(object sender, EventArgs e)
         {

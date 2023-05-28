@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SQL_Dangnhap;
+using themsv;
+using FormQLSV;
 
 namespace Quanlysinhvien
 {

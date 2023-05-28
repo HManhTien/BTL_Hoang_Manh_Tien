@@ -1,6 +1,6 @@
 ﻿namespace themsv
 {
-    partial class themsv1
+    partial class Themuser
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_mssv = new System.Windows.Forms.TextBox();
-            this.txt_hoten = new System.Windows.Forms.TextBox();
-            this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.txt_dt = new System.Windows.Forms.TextBox();
-            this.txt_lop = new System.Windows.Forms.ComboBox();
+            this.textbox1 = new System.Windows.Forms.TextBox();
+            this.textbox2 = new System.Windows.Forms.TextBox();
+            this.textbox4 = new System.Windows.Forms.TextBox();
+            this.textbox3 = new System.Windows.Forms.TextBox();
+            this.combobox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.YellowGreen;
-            this.button1.Location = new System.Drawing.Point(63, 342);
+            this.button1.Location = new System.Drawing.Point(143, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 53);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Thêm";
+            this.button1.Text = "Gửi yêu cầu";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -60,7 +60,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(221, 34);
             this.label1.TabIndex = 1;
-            this.label1.Text = "THÊM SINH VIÊN";
+            this.label1.Text = "Thêm người dùng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -69,7 +69,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "MSSV";
+            this.label2.Text = "ID";
             // 
             // label3
             // 
@@ -77,7 +77,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 26);
             this.label3.TabIndex = 3;
-            this.label3.Text = "HỌ TÊN :";
+            this.label3.Text = "Tài Khoản ";
             // 
             // label4
             // 
@@ -85,7 +85,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 26);
             this.label4.TabIndex = 4;
-            this.label4.Text = "LỚP";
+            this.label4.Text = "Mật Khẩu";
             // 
             // label5
             // 
@@ -93,7 +93,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 26);
             this.label5.TabIndex = 5;
-            this.label5.Text = "ĐỊA CHỈ";
+            this.label5.Text = "Họ tên";
             // 
             // label6
             // 
@@ -101,64 +101,63 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 26);
             this.label6.TabIndex = 6;
-            this.label6.Text = "SDT";
+            this.label6.Text = "Chức vu";
             // 
-            // txt_mssv
+            // textbox1
             // 
-            this.txt_mssv.Location = new System.Drawing.Point(129, 61);
-            this.txt_mssv.Multiline = true;
-            this.txt_mssv.Name = "txt_mssv";
-            this.txt_mssv.Size = new System.Drawing.Size(216, 30);
-            this.txt_mssv.TabIndex = 7;
+            this.textbox1.Location = new System.Drawing.Point(129, 61);
+            this.textbox1.Multiline = true;
+            this.textbox1.Name = "textbox1";
+            this.textbox1.Size = new System.Drawing.Size(216, 30);
+            this.textbox1.TabIndex = 7;
             // 
-            // txt_hoten
+            // textbox2
             // 
-            this.txt_hoten.Location = new System.Drawing.Point(129, 107);
-            this.txt_hoten.Multiline = true;
-            this.txt_hoten.Name = "txt_hoten";
-            this.txt_hoten.Size = new System.Drawing.Size(216, 30);
-            this.txt_hoten.TabIndex = 8;
+            this.textbox2.Location = new System.Drawing.Point(129, 107);
+            this.textbox2.Multiline = true;
+            this.textbox2.Name = "textbox2";
+            this.textbox2.Size = new System.Drawing.Size(216, 30);
+            this.textbox2.TabIndex = 8;
             // 
-            // txt_diachi
+            // textbox4
             // 
-            this.txt_diachi.Location = new System.Drawing.Point(129, 200);
-            this.txt_diachi.Multiline = true;
-            this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(216, 30);
-            this.txt_diachi.TabIndex = 10;
+            this.textbox4.Location = new System.Drawing.Point(129, 200);
+            this.textbox4.Multiline = true;
+            this.textbox4.Name = "textbox4";
+            this.textbox4.Size = new System.Drawing.Size(216, 30);
+            this.textbox4.TabIndex = 10;
             // 
-            // txt_dt
+            // textbox3
             // 
-            this.txt_dt.Location = new System.Drawing.Point(129, 249);
-            this.txt_dt.Multiline = true;
-            this.txt_dt.Name = "txt_dt";
-            this.txt_dt.Size = new System.Drawing.Size(216, 30);
-            this.txt_dt.TabIndex = 11;
+            this.textbox3.Location = new System.Drawing.Point(129, 157);
+            this.textbox3.Multiline = true;
+            this.textbox3.Name = "textbox3";
+            this.textbox3.Size = new System.Drawing.Size(216, 30);
+            this.textbox3.TabIndex = 11;
             // 
-            // txt_lop
+            // combobox1
             // 
-            this.txt_lop.FormattingEnabled = true;
-            this.txt_lop.Items.AddRange(new object[] {
-            "56KMT.01",
-            "57KMT.01",
-            "58KMT.01"});
-            this.txt_lop.Location = new System.Drawing.Point(129, 158);
-            this.txt_lop.Name = "txt_lop";
-            this.txt_lop.Size = new System.Drawing.Size(216, 24);
-            this.txt_lop.TabIndex = 12;
-            this.txt_lop.Text = "56KMT.01";
+            this.combobox1.FormattingEnabled = true;
+            this.combobox1.Items.AddRange(new object[] {
+            "Quản Trị Viên",
+            "Nhân Viên"});
+            this.combobox1.Location = new System.Drawing.Point(129, 250);
+            this.combobox1.Name = "combobox1";
+            this.combobox1.Size = new System.Drawing.Size(216, 24);
+            this.combobox1.TabIndex = 12;
+            this.combobox1.Text = "Nhân Viên";
             // 
-            // themsv1
+            // Themuser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(482, 450);
-            this.Controls.Add(this.txt_lop);
-            this.Controls.Add(this.txt_dt);
-            this.Controls.Add(this.txt_diachi);
-            this.Controls.Add(this.txt_hoten);
-            this.Controls.Add(this.txt_mssv);
+            this.Controls.Add(this.combobox1);
+            this.Controls.Add(this.textbox3);
+            this.Controls.Add(this.textbox4);
+            this.Controls.Add(this.textbox2);
+            this.Controls.Add(this.textbox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -166,7 +165,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "themsv1";
+            this.Name = "Themuser";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -183,11 +182,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_mssv;
-        private System.Windows.Forms.TextBox txt_hoten;
-        private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.TextBox txt_dt;
-        private System.Windows.Forms.ComboBox txt_lop;
+        private System.Windows.Forms.TextBox textbox1;
+        private System.Windows.Forms.TextBox textbox2;
+        private System.Windows.Forms.TextBox textbox4;
+        private System.Windows.Forms.TextBox textbox3;
+        private System.Windows.Forms.ComboBox combobox1;
     }
 }
 

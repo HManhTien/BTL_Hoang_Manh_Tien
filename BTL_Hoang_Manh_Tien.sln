@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QuanLybanhang", "QuanLybanh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quanlysinhvien", "Quanlysinhvien\Quanlysinhvien.csproj", "{ACE52CD6-4D73-431F-8160-28E7923D8741}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "WindowsFormsApp2\WindowsFormsApp2.csproj", "{DBBDAEE6-2089-469D-BC9C-8BCF7B72B385}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chocatcode", "WindowsFormsApp2\Chocatcode.csproj", "{DBBDAEE6-2089-469D-BC9C-8BCF7B72B385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
