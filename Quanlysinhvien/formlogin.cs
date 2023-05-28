@@ -12,6 +12,7 @@ using System.Data;
 using System.Xml;
 using FormQLSV;
 using themsv;
+using formsvview;
 
 
 
@@ -62,10 +63,16 @@ namespace SQL_Dangnhap
             }
             else
             {
+               
                 MessageBox.Show("NHÂN VIÊN  ĐĂNG NHẬP THÀNH CÔNG !!");
+
+                formsvview.formNV NV = new formsvview.formNV();
+                this.Hide();
+                NV.ShowDialog();
+
             }
 
-            
+
 
         }
         private void button1_Click(object sender, EventArgs e)

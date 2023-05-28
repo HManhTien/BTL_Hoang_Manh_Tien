@@ -26,7 +26,10 @@ namespace formsvview
         SqlDataReader docdulieu;
         string sql;
         DataTable dt;
+        DataTable dtaa;
+        DataRow row;
         float tong = 0;
+        int shd;
 
 
 
@@ -53,6 +56,7 @@ namespace formsvview
             comboBox1.DataSource = tbl;
             comboBox1.DisplayMember = "TenHang";
             comboBox1.ValueMember = "MaHang";
+
             ketnoi.Close();
         }
 
@@ -104,5 +108,110 @@ namespace formsvview
             this.Hide();
             login.ShowDialog();
         }
+        public void xoa()
+        {
+            txt_mkh.Clear();
+            txt_tkh.Clear();
+            txt_dckh.Clear();
+            txt_sdt.Clear();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string mancc = txt_mkh.Text;
+            string tncc = txt_tkh.Text;
+            string diachi = txt_dckh.Text;
+            string sdt = txt_sdt.Text;
+
+
+            //check SL mat hang trong kho co hay ko ;
+            ketnoi.Open();
+            string mhtk = @"SELECT Mahang as 'SHD'
+                        FROM MAT_HANG";
+            thuchien = new SqlCommand(mhtk, ketnoi);
+            docdulieu = thuchien.ExecuteReader();
+            dt = new DataTable();
+            dt.Load(docdulieu);
+            docdulieu.Close();
+            DataRow firstRow1 = dt.Rows[0];
+            string mahang = Convert.ToString(firstRow1["SHD"]);
+            firstRow1.ClearErrors();
+            MessageBox.Show("" + mahang + "");
+            ketnoi.Close();
+
+            // Checksl
+            ketnoi.Open();
+            string khtk = @"SELECT MAX(SHD) as 'SHD'
+                            FROM BAN_HANG";
+            thuchien = new SqlCommand(khtk, ketnoi);
+            docdulieu = thuchien.ExecuteReader();
+            dtaa = new DataTable();
+            dtaa.Load(docdulieu);
+            docdulieu.Close();
+            
+            DataRow row = dtaa.Rows[0];
+             shd = Convert.ToInt32(row["SHD"]);
+            row.ClearErrors();
+            MessageBox.Show("" + shd + "");
+            ketnoi.Close();
+
+
+
+            ketnoi.Open();
+            string str = $"select * from Khachhang  Where Makhachhang = '" + mancc + "' ";
+            thuchien = new SqlCommand(str, ketnoi);
+            docdulieu = thuchien.ExecuteReader();
+            DataTable dt1 = new DataTable();
+            dt1.Load(docdulieu);
+            docdulieu.Close();
+            if (dt1.Rows.Count > 0)
+            {
+                MessageBox.Show("Da co khach hang nay !!");              
+            }
+            else
+            {
+                ketnoi.Close();
+                ketnoi.Open();
+                sql = @"insert into Khachhang
+	              values 
+                 ('" + mancc + "' , '" + tncc + "' , '" + diachi + "'  , '" + sdt + "' )";
+                thuchien = new SqlCommand(sql, ketnoi);
+                thuchien.ExecuteNonQuery();
+
+                xoa();
+                ketnoi.Close();
+
+            }
+            ketnoi.Close();
+
+
+
+
+           // Them Hoa don ban hang;
+            ketnoi.Open();
+            string tenthungan = comboBox1.Text;
+            int SoHD = Convert.ToInt32(textBox7.Text);
+            shd++;
+            sql = @"insert into BAN_HANG
+	              values 
+                 (" + shd + " , N'" + tenthungan + "' , N'" + mancc + "'  , N'" + mahang + "' , " + SoHD + " )";
+            thuchien = new SqlCommand(sql, ketnoi);
+            thuchien.ExecuteNonQuery();
+
+            xoa();
+            ketnoi.Close();
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+ 
     }
 }

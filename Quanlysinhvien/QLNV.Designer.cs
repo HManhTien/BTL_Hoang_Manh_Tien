@@ -48,10 +48,10 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_mkh = new System.Windows.Forms.TextBox();
+            this.txt_tkh = new System.Windows.Forms.TextBox();
+            this.txt_dckh = new System.Windows.Forms.TextBox();
+            this.txt_sdt = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -163,12 +163,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.button2.Location = new System.Drawing.Point(592, 685);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 23);
+            this.button2.Size = new System.Drawing.Size(118, 34);
             this.button2.TabIndex = 11;
             this.button2.Text = "Đăng Xuất";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label6
@@ -306,33 +308,33 @@
             this.comboBox4.Size = new System.Drawing.Size(72, 24);
             this.comboBox4.TabIndex = 21;
             // 
-            // textBox3
+            // txt_mkh
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 91);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 22);
-            this.textBox3.TabIndex = 22;
+            this.txt_mkh.Location = new System.Drawing.Point(167, 91);
+            this.txt_mkh.Name = "txt_mkh";
+            this.txt_mkh.Size = new System.Drawing.Size(145, 22);
+            this.txt_mkh.TabIndex = 22;
             // 
-            // textBox4
+            // txt_tkh
             // 
-            this.textBox4.Location = new System.Drawing.Point(167, 150);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 22);
-            this.textBox4.TabIndex = 23;
+            this.txt_tkh.Location = new System.Drawing.Point(167, 150);
+            this.txt_tkh.Name = "txt_tkh";
+            this.txt_tkh.Size = new System.Drawing.Size(145, 22);
+            this.txt_tkh.TabIndex = 23;
             // 
-            // textBox5
+            // txt_dckh
             // 
-            this.textBox5.Location = new System.Drawing.Point(467, 91);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 22);
-            this.textBox5.TabIndex = 24;
+            this.txt_dckh.Location = new System.Drawing.Point(467, 91);
+            this.txt_dckh.Name = "txt_dckh";
+            this.txt_dckh.Size = new System.Drawing.Size(122, 22);
+            this.txt_dckh.TabIndex = 24;
             // 
-            // textBox6
+            // txt_sdt
             // 
-            this.textBox6.Location = new System.Drawing.Point(467, 155);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(122, 22);
-            this.textBox6.TabIndex = 25;
+            this.txt_sdt.Location = new System.Drawing.Point(467, 155);
+            this.txt_sdt.Name = "txt_sdt";
+            this.txt_sdt.Size = new System.Drawing.Size(122, 22);
+            this.txt_sdt.TabIndex = 25;
             // 
             // groupBox1
             // 
@@ -340,10 +342,10 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txt_sdt);
+            this.groupBox1.Controls.Add(this.txt_dckh);
+            this.groupBox1.Controls.Add(this.txt_tkh);
+            this.groupBox1.Controls.Add(this.txt_mkh);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -361,9 +363,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(87, 204);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 20);
+            this.label13.Size = new System.Drawing.Size(60, 20);
             this.label13.TabIndex = 28;
-            this.label13.Text = "SHD";
+            this.label13.Text = "Số HD";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox7
@@ -418,6 +420,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "Thanh Toán";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // formNV
             // 
@@ -463,10 +466,10 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_mkh;
+        private System.Windows.Forms.TextBox txt_tkh;
+        private System.Windows.Forms.TextBox txt_dckh;
+        private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;

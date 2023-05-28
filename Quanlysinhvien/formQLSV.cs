@@ -311,7 +311,7 @@ namespace FormQLSV
             ketnoi.Close();
 
             ketnoi.Open();
-            string sql1 = @"select * from BAN_HANG";
+            string sql1 = @"select DISTINCT SOHD from BAN_HANG";
             thuchien = new SqlCommand(sql1, ketnoi);
             SqlDataAdapter da1 = new SqlDataAdapter();
             da1.SelectCommand = thuchien;
@@ -319,8 +319,8 @@ namespace FormQLSV
             DataTable tbl1 = new DataTable();
             da1.Fill(tbl1);
             comboBox2.DataSource = tbl1;
-            comboBox2.DisplayMember = "SHD";
-            comboBox2.ValueMember = "SHD";
+            comboBox2.DisplayMember = "SoHD";
+            comboBox2.ValueMember = "SoHD";
             ketnoi.Close();
         }
 
@@ -350,7 +350,7 @@ namespace FormQLSV
                 from BAN_HANG
                 INNER JOIN Khachhang ON BAN_HANG.Makhachhang = Khachhang.Makhachhang
                 INNER JOIN Mat_Hang ON BAN_HANG.Mahang = Mat_Hang.Mahang
-                Where SHD ='" + texet + "'";
+                Where SOHD ='" + texet + "'";
             hienthi();
             dataGridView4.DataSource = dt;
             ketnoi.Close();

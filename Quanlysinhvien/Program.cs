@@ -23,7 +23,7 @@ namespace Quanlysinhvien
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formNV());
+            Application.Run(new formlogin());
         }
     }
 }
