@@ -49,12 +49,6 @@ namespace FormQLSV
             dt = new DataTable();
             dt.Load(docdulieu);
             
-           
-
-
-
-
-
 
         }
 
@@ -374,7 +368,7 @@ namespace FormQLSV
 
 
             sql = @"UPDATE Mat_Hang
-                SET Mahang  = N'"+masp+"', TenHang  ='"+ tensp + "' , Soluong = '"+ soluong + "', Dongia ='"+ dongia + "'  WHERE Mahang = '"+ma+"'";
+            SET Mahang  = N'"+masp+"', TenHang  ='"+ tensp + "' , Soluong = '"+ soluong + "', Dongia ='"+ dongia + "'  WHERE Mahang = '"+ma+"'";
             MessageBox.Show("SỬA THÀNH CÔNG!!");
 
             thuchien = new SqlCommand(sql, ketnoi);
@@ -385,6 +379,16 @@ namespace FormQLSV
             txtsoluong.Clear();
             txtdongia.Clear();
             ketnoi.Close();
+        }
+
+        private void cmd_suanhacc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -28,6 +28,7 @@ namespace SQL_Dangnhap
         SqlDataReader docdulieu;
         // SqlCommand thuchien;
         string tk, mk;
+      
         FormQLSV.FormQLSV fr2 = new FormQLSV.FormQLSV();
         themsv.Themuser themuser = new themsv.Themuser();
         string connStr = @"Data Source=HOANGTIEN\SQL;Initial Catalog=QL_BHST_GO;Integrated Security=True";
@@ -55,7 +56,7 @@ namespace SQL_Dangnhap
                 MessageBox.Show("ADMIN ĐĂNG NHẬP THÀNH CÔNG !!");
                 this.Hide();
                 fr2.ShowDialog();
-                fr2.Show();
+               
 
 
             }

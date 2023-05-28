@@ -85,6 +85,16 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -93,16 +103,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.dataGridViewtkadd = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -114,10 +114,10 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtkadd)).BeginInit();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtkadd)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -173,6 +173,7 @@
             this.cmd_suanhacc.TabIndex = 38;
             this.cmd_suanhacc.Text = "Sửa";
             this.cmd_suanhacc.UseVisualStyleBackColor = true;
+            this.cmd_suanhacc.Click += new System.EventHandler(this.cmd_suanhacc_Click);
             // 
             // label8
             // 
@@ -731,6 +732,107 @@
             this.tabPage4.Text = "Hóa Đơn";
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(510, 460);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(128, 33);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "View";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(348, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(224, 29);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Thông Tin Hóa Đơn";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(111, 477);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(83, 16);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "hóa đơn xuất";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(111, 419);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(92, 16);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Hóa đơn nhập";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(687, 432);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 51);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "IN EXEL";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(510, 402);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 38);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "View";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "...."});
+            this.comboBox2.Location = new System.Drawing.Point(211, 469);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(223, 24);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "..."});
+            this.comboBox1.Location = new System.Drawing.Point(211, 416);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(223, 24);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dataGridView4);
+            this.groupBox4.Location = new System.Drawing.Point(109, 68);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(694, 317);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowHeadersWidth = 51;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(688, 311);
+            this.dataGridView4.TabIndex = 0;
+            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -826,106 +928,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.dataGridView4);
-            this.groupBox4.Location = new System.Drawing.Point(109, 68);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(694, 317);
-            this.groupBox4.TabIndex = 0;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(688, 311);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "..."});
-            this.comboBox1.Location = new System.Drawing.Point(211, 416);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(223, 24);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "...."});
-            this.comboBox2.Location = new System.Drawing.Point(211, 469);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(223, 24);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(510, 402);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 38);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "View";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(687, 432);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 51);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "IN EXEL";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(111, 419);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(92, 16);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Hóa đơn nhập";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(111, 477);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(83, 16);
-            this.label22.TabIndex = 6;
-            this.label22.Text = "hóa đơn xuất";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(348, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(224, 29);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "Thông Tin Hóa Đơn";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(510, 460);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(128, 33);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "View";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // FormQLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -953,11 +955,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewtkadd)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

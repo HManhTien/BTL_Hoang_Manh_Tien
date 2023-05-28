@@ -28,7 +28,7 @@ namespace FormQLSV
         SqlCommand thuchien;
         SqlDataReader docdulieu;
 
-        themsv.themsv1 tsv = new themsv.themsv1();
+        themsv.QLNV tsv = new themsv.QLNV();
 
         private void FormQLSV_Load(object sender, EventArgs e)
         {
