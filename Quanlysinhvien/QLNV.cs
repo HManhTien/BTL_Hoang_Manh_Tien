@@ -27,9 +27,11 @@ namespace formsvview
         string sql;
         DataTable dt;
         DataTable dtaa;
-        DataRow row;
+        DataRow row, ras;
         float tong = 0;
-        int shd;
+        int shd, shd1, shd2;
+        string mahang;
+
 
 
 
@@ -83,6 +85,8 @@ namespace formsvview
 
 
         }
+
+        
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -115,14 +119,9 @@ namespace formsvview
             txt_dckh.Clear();
             txt_sdt.Clear();
         }
-        private void button3_Click(object sender, EventArgs e)
+
+        public void docgiatri()
         {
-            string mancc = txt_mkh.Text;
-            string tncc = txt_tkh.Text;
-            string diachi = txt_dckh.Text;
-            string sdt = txt_sdt.Text;
-
-
             //check SL mat hang trong kho co hay ko ;
             ketnoi.Open();
             string mhtk = @"SELECT Mahang as 'SHD'
@@ -133,12 +132,13 @@ namespace formsvview
             dt.Load(docdulieu);
             docdulieu.Close();
             DataRow firstRow1 = dt.Rows[0];
-            string mahang = Convert.ToString(firstRow1["SHD"]);
+             mahang = Convert.ToString(firstRow1["SHD"]);
             firstRow1.ClearErrors();
-            MessageBox.Show("" + mahang + "");
+
             ketnoi.Close();
 
-            // Checksl
+
+
             ketnoi.Open();
             string khtk = @"SELECT MAX(SHD) as 'SHD'
                             FROM BAN_HANG";
@@ -147,12 +147,47 @@ namespace formsvview
             dtaa = new DataTable();
             dtaa.Load(docdulieu);
             docdulieu.Close();
-            
             DataRow row = dtaa.Rows[0];
-             shd = Convert.ToInt32(row["SHD"]);
+            shd = Convert.ToInt32(row["SHD"]);
             row.ClearErrors();
-            MessageBox.Show("" + shd + "");
             ketnoi.Close();
+
+
+
+
+
+            ketnoi.Open();
+            string khtk1 = @"SELECT MAX(SHD) as 'SHD'
+                            FROM BAN_HANG WHERE SHD >= 10 ";
+            thuchien = new SqlCommand(khtk1, ketnoi);
+            docdulieu = thuchien.ExecuteReader();
+            dtaa = new DataTable();
+            dtaa.Load(docdulieu);
+            docdulieu.Close();
+            if(dtaa.Rows.Count > 0)
+            {
+                DataRow ras = dtaa.Rows[0];
+                shd1 = Convert.ToInt32(ras["SHD"]);
+                row.ClearErrors();
+            }
+           else
+            {
+                shd1 = 0;
+            }
+            ketnoi.Close();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string mancc = txt_mkh.Text;
+            string tncc = txt_tkh.Text;
+            string diachi = txt_dckh.Text;
+            string sdt = txt_sdt.Text;
+
+
+
+            docgiatri();
+           
+
 
 
 
@@ -186,15 +221,24 @@ namespace formsvview
 
 
 
-           // Them Hoa don ban hang;
+           if(shd1 > shd)
+            {
+                 shd2  = shd1;
+            }
+           else
+            {
+                shd2 = shd;
+            }
             ketnoi.Open();
             string tenthungan = comboBox1.Text;
             int SoHD = Convert.ToInt32(textBox7.Text);
-            shd++;
+
+            shd2++;
             sql = @"insert into BAN_HANG
 	              values 
-                 (" + shd + " , N'" + tenthungan + "' , N'" + mancc + "'  , N'" + mahang + "' , " + SoHD + " )";
+                 (" + shd2 + " , N'" + tenthungan + "' , N'" + mancc + "'  , N'" + mahang + "' , " + SoHD + " )";
             thuchien = new SqlCommand(sql, ketnoi);
+            MessageBox.Show(sql);
             thuchien.ExecuteNonQuery();
 
             xoa();
