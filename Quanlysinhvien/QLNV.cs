@@ -176,6 +176,14 @@ namespace formsvview
             }
             ketnoi.Close();
         }
+
+        public void kiemtraslmh()
+        {
+            string tenmh = comboBox1.Text;
+
+
+
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             string mancc = txt_mkh.Text;

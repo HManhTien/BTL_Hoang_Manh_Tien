@@ -13,13 +13,16 @@ using System.Xml;
 using FormQLSV;
 using themsv;
 using formsvview;
+using chatbotc;
 
 
 
 namespace SQL_Dangnhap
 {
+   
     public partial class formlogin : Form
     {
+        chatbotc.Form1 bot = new Form1 ();
         public formlogin()
         {
             InitializeComponent();

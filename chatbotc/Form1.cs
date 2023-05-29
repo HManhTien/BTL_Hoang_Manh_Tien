@@ -123,15 +123,19 @@ namespace chatbotc
                     reply = HoiDap.timkiemkhachhang("%" + tenKH+ "%");
                    
                 }
-                else if (messLow.StartsWith("hoadon: "))
+                else if (messLow.StartsWith("hd "))
                 {
                     string Tenhoadon = messageText.Substring(3);
-                    reply = HoiDap.timkiemkhachhang("%" + Tenhoadon.Replace(" " ,"%") + "%");
+                    reply = HoiDap.tkhd("%" + Tenhoadon.Replace(" " ,"%") + "%");
                 }
                 else if(messLow.StartsWith("codeby"))
                 {
                     reply = " - Hoàng Mạnh Tiến  \n\r  Lớp 56KMT   \n\r  Học Rất dốt ";
                     
+                }
+                else if(messLow.StartsWith("thoi tiet"))
+                {
+
                 }
                 else
                 {
