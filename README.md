@@ -12,7 +12,7 @@
 
 <a name="Project structure"></a>
 ## Project structure
--   📂 Newfolder 
+-   📂 BTL_Hoang Manh Tien
      - 📂Quanlysinhvien
           - QuanLyBanHang 
               
