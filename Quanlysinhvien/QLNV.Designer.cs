@@ -40,7 +40,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -58,6 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.slmh_banra = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -193,13 +193,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(187, 24);
             this.comboBox1.TabIndex = 13;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(421, 102);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(69, 22);
-            this.textBox1.TabIndex = 14;
             // 
             // textBox2
             // 
@@ -391,6 +384,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FloralWhite;
+            this.groupBox2.Controls.Add(this.slmh_banra);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.label12);
@@ -399,7 +393,6 @@
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.button1);
@@ -423,6 +416,13 @@
             this.button3.Text = "Thanh Toán";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // slmh_banra
+            // 
+            this.slmh_banra.Location = new System.Drawing.Point(421, 102);
+            this.slmh_banra.Name = "slmh_banra";
+            this.slmh_banra.Size = new System.Drawing.Size(62, 22);
+            this.slmh_banra.TabIndex = 28;
             // 
             // formNV
             // 
@@ -460,7 +460,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -478,6 +477,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox slmh_banra;
     }
 }
 
