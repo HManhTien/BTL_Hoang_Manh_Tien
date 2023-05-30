@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQLSV));
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cmd_xoanhacc = new System.Windows.Forms.Button();
@@ -157,23 +158,24 @@
             // 
             // cmd_xoanhacc
             // 
+            this.cmd_xoanhacc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cmd_xoanhacc.Location = new System.Drawing.Point(307, 433);
             this.cmd_xoanhacc.Name = "cmd_xoanhacc";
             this.cmd_xoanhacc.Size = new System.Drawing.Size(101, 49);
             this.cmd_xoanhacc.TabIndex = 39;
             this.cmd_xoanhacc.Text = "Xóa";
-            this.cmd_xoanhacc.UseVisualStyleBackColor = true;
+            this.cmd_xoanhacc.UseVisualStyleBackColor = false;
             this.cmd_xoanhacc.Click += new System.EventHandler(this.cmd_xoanhacc_Click);
             // 
             // cmd_suanhacc
             // 
+            this.cmd_suanhacc.BackColor = System.Drawing.Color.Aqua;
             this.cmd_suanhacc.Location = new System.Drawing.Point(167, 433);
             this.cmd_suanhacc.Name = "cmd_suanhacc";
             this.cmd_suanhacc.Size = new System.Drawing.Size(101, 49);
             this.cmd_suanhacc.TabIndex = 38;
             this.cmd_suanhacc.Text = "Sửa";
-            this.cmd_suanhacc.UseVisualStyleBackColor = true;
-            this.cmd_suanhacc.Click += new System.EventHandler(this.cmd_suanhacc_Click);
+            this.cmd_suanhacc.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -286,12 +288,13 @@
             // 
             // cmd_themnhacc
             // 
+            this.cmd_themnhacc.BackColor = System.Drawing.Color.Lime;
             this.cmd_themnhacc.Location = new System.Drawing.Point(24, 433);
             this.cmd_themnhacc.Name = "cmd_themnhacc";
             this.cmd_themnhacc.Size = new System.Drawing.Size(101, 49);
             this.cmd_themnhacc.TabIndex = 27;
             this.cmd_themnhacc.Text = "Thêm";
-            this.cmd_themnhacc.UseVisualStyleBackColor = true;
+            this.cmd_themnhacc.UseVisualStyleBackColor = false;
             this.cmd_themnhacc.Click += new System.EventHandler(this.cmd_themnhacc_Click);
             // 
             // groupBox2
@@ -347,22 +350,24 @@
             // 
             // cmd_xoasp
             // 
+            this.cmd_xoasp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.cmd_xoasp.Location = new System.Drawing.Point(308, 427);
             this.cmd_xoasp.Name = "cmd_xoasp";
             this.cmd_xoasp.Size = new System.Drawing.Size(101, 49);
             this.cmd_xoasp.TabIndex = 23;
             this.cmd_xoasp.Text = "Xóa";
-            this.cmd_xoasp.UseVisualStyleBackColor = true;
+            this.cmd_xoasp.UseVisualStyleBackColor = false;
             this.cmd_xoasp.Click += new System.EventHandler(this.cmd_xoasp_Click);
             // 
             // cmd_suasp
             // 
+            this.cmd_suasp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.cmd_suasp.Location = new System.Drawing.Point(168, 427);
             this.cmd_suasp.Name = "cmd_suasp";
             this.cmd_suasp.Size = new System.Drawing.Size(101, 49);
             this.cmd_suasp.TabIndex = 22;
             this.cmd_suasp.Text = "Sửa";
-            this.cmd_suasp.UseVisualStyleBackColor = true;
+            this.cmd_suasp.UseVisualStyleBackColor = false;
             this.cmd_suasp.Click += new System.EventHandler(this.cmd_suasp_Click);
             // 
             // label7
@@ -437,12 +442,14 @@
             // 
             // cmd_tk_sanpham
             // 
-            this.cmd_tk_sanpham.Location = new System.Drawing.Point(308, 23);
+            this.cmd_tk_sanpham.BackColor = System.Drawing.Color.Thistle;
+            this.cmd_tk_sanpham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmd_tk_sanpham.Image = ((System.Drawing.Image)(resources.GetObject("cmd_tk_sanpham.Image")));
+            this.cmd_tk_sanpham.Location = new System.Drawing.Point(292, 23);
             this.cmd_tk_sanpham.Name = "cmd_tk_sanpham";
-            this.cmd_tk_sanpham.Size = new System.Drawing.Size(83, 32);
+            this.cmd_tk_sanpham.Size = new System.Drawing.Size(53, 40);
             this.cmd_tk_sanpham.TabIndex = 15;
-            this.cmd_tk_sanpham.Text = "Searh";
-            this.cmd_tk_sanpham.UseVisualStyleBackColor = true;
+            this.cmd_tk_sanpham.UseVisualStyleBackColor = false;
             this.cmd_tk_sanpham.Click += new System.EventHandler(this.cmd_tk_sanpham_Click);
             // 
             // label4
@@ -476,12 +483,13 @@
             // 
             // cmd_themsp
             // 
+            this.cmd_themsp.BackColor = System.Drawing.Color.Lime;
             this.cmd_themsp.Location = new System.Drawing.Point(25, 427);
             this.cmd_themsp.Name = "cmd_themsp";
             this.cmd_themsp.Size = new System.Drawing.Size(101, 49);
             this.cmd_themsp.TabIndex = 6;
             this.cmd_themsp.Text = "Thêm";
-            this.cmd_themsp.UseVisualStyleBackColor = true;
+            this.cmd_themsp.UseVisualStyleBackColor = false;
             this.cmd_themsp.Click += new System.EventHandler(this.cmd_themsp_Click);
             // 
             // groupBox1
@@ -552,22 +560,24 @@
             // 
             // cmd_xoa
             // 
+            this.cmd_xoa.BackColor = System.Drawing.Color.Yellow;
             this.cmd_xoa.Location = new System.Drawing.Point(307, 416);
             this.cmd_xoa.Name = "cmd_xoa";
             this.cmd_xoa.Size = new System.Drawing.Size(101, 49);
             this.cmd_xoa.TabIndex = 55;
             this.cmd_xoa.Text = "Xóa";
-            this.cmd_xoa.UseVisualStyleBackColor = true;
+            this.cmd_xoa.UseVisualStyleBackColor = false;
             this.cmd_xoa.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Aqua;
             this.button3.Location = new System.Drawing.Point(167, 416);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 49);
             this.button3.TabIndex = 54;
             this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -680,12 +690,13 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Lime;
             this.button5.Location = new System.Drawing.Point(24, 416);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(101, 49);
             this.button5.TabIndex = 43;
             this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox3
@@ -773,12 +784,14 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Red;
             this.button4.Location = new System.Drawing.Point(687, 432);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 51);
             this.button4.TabIndex = 4;
-            this.button4.Text = "IN EXEL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Text = "PDF";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -809,7 +822,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(223, 24);
             this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox4
             // 
@@ -920,12 +932,16 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(753, 610);
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(744, 603);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 35);
+            this.button1.Size = new System.Drawing.Size(137, 48);
             this.button1.TabIndex = 10;
             this.button1.Text = "Đăng xuất";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormQLSV

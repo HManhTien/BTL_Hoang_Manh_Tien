@@ -165,11 +165,13 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Firebrick;
             this.button2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(592, 685);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 34);
+            this.button2.Size = new System.Drawing.Size(132, 44);
             this.button2.TabIndex = 11;
             this.button2.Text = "Đăng Xuất";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using themsv;
 using SQL_Dangnhap;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.Data.Common;
 
 
 
@@ -381,14 +385,96 @@ namespace FormQLSV
             ketnoi.Close();
         }
 
-        private void cmd_suanhacc_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void button4_Click(object sender, EventArgs e)
+        {  // so luong hang trpng dgrv lon hon 0
+            iTextSharp.text.Font textFont;
+            if (dataGridView4.Rows.Count > 0)
+                {
+                // Tao cai luu file
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.Filter = "PDF (*.pdf)|*.pdf";
+                    sfd.FileName = "Output.pdf";
+                    bool fileError = false;
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        if (File.Exists(sfd.FileName))    // neu file ton tai thi thay the no 
+                        {
+                            try
+                            {
+                                File.Delete(sfd.FileName);
+                            }
+                            catch (IOException ex)
+                            {
+                                fileError = true;
+                                MessageBox.Show("Không thể ghi dữ liệu tới ổ đĩa. Mô tả lỗi:" + ex.Message);
+                            }
+                        }
+                        if (!fileError)
+                        {
+                            try
+                            {
+                                PdfPTable pdfTable = new PdfPTable(dataGridView4.Columns.Count);
+                                pdfTable.DefaultCell.Padding = 3;          // gia tri le 
+                                pdfTable.WidthPercentage = 100;             // do rong
+                                pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
+                                // BaseFont unicodeFont = BaseFont.CreateFont("arial.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                                //textFont = new iTextSharp.text.Font(unicodeFont, 12, iTextSharp.text.Font.NORMAL);
+
+                            //Them cot
+                            foreach (DataGridViewColumn column in dataGridView4.Columns)
+                                {
+                                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                                    pdfTable.AddCell(cell);
+                                }
+
+                                // lap qua cac hang trong datagripview
+                                foreach (DataGridViewRow row  in dataGridView4.Rows)
+                                {
+                                if (!row.IsNewRow)
+                                {
+                                    foreach (DataGridViewCell cell in row.Cells)
+                                    {
+                                      
+                                        {
+                                            pdfTable.AddCell(cell.Value.ToString());
+                                            
+                                            //string cellValue = cell.Value.ToString();
+                                            //PdfPCell pdfCell = new PdfPCell(new Phrase(cellValue, textFont));
+                                            //pdfTable.AddCell(pdfCell);
+                                            
+                                        }
+                                    }
+                                }
+                            }
+
+                                using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                                {
+                                    //can le cho cai trang pdf
+                                    Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                                    PdfWriter.GetInstance(pdfDoc, stream);
+                                    pdfDoc.Open();
+                                    pdfDoc.Add(pdfTable);
+                                    pdfDoc.Close();
+                                    stream.Close();
+                                }
+
+                                MessageBox.Show("Dữ liệu Export thành công!!!", "Info");
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Mô tả lỗi :" + ex.Message);
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không có bản ghi nào được Export!!!", "Info");
+                }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
