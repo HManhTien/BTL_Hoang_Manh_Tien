@@ -13,5 +13,8 @@
 <a name="Project structure"></a>
 ## Project structure
 -   📂 Newfolder 
-     - 📄ConnectC#_SQL(#ConnectC#_SQL)
+     - 📂Quanlysinhvien
+          - QuanLyBanHang 
+              
+     
  
